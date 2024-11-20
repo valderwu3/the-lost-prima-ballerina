@@ -5,7 +5,7 @@ import { MetadataRoute } from 'next'
 // 2. 在开发环境中访问 /sitemap.xml 路径时动态生成
 // 3. 不会在每个请求时重新生成,除非使用动态函数如 fetch 或 dynamic
 export default function sitemap(): MetadataRoute.Sitemap {
-  // 替换成你的实际网站URL
+  // 替换成你的实际网站URL10
   const baseUrl = 'https://thelostprimaballerina.org'
   
   return [
