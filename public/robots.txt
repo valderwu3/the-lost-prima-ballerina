@@ -1,0 +1,11 @@
+# 全局规则
+User-agent: *
+Allow: /
+
+# 禁止访问的路径
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Sitemap 链接（如果你有的话）
+Sitemap: https://thelostprimaballerina.org/sitemap.xml

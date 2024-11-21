@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 export default function EpisodeDetails() {
   return (
     <Card className="p-6 mb-8">
-      <h1 className="text-3xl font-bold mb-4">The Lost Prima Ballerina</h1>
+      <h2 className="text-3xl font-bold mb-4">The Lost Prima Ballerina</h2>
       <div className="flex flex-wrap gap-2 mb-4">
         <Badge>Drama</Badge>
         <Badge variant="secondary">Dance</Badge>

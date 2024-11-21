@@ -36,7 +36,7 @@ export default function Header() {
             <div className="flex items-center space-x-3">
               <Music4 className="h-8 w-8 text-primary" />
               <h1 className="text-4xl font-bold tracking-tight text-white">
-                The Lost Prima Ballerina
+                The Lost Prima Ballerina Full Movie
               </h1>
             </div>
             <h2 className="text-xl font-medium tracking-wide text-white/90 italic max-w-2xl py-5">
