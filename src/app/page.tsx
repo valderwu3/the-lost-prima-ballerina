@@ -11,10 +11,8 @@ import Recommendations from '@/components/Recommendations'
 import Reviews from '@/components/Reviews'
 import Footer from '@/components/Footer'
 import { Button } from '@/components/ui/button'
-import Script from 'next/script'
-import { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function Home() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
@@ -31,53 +29,34 @@ export default function App({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <>
-      {/* Google Analytics */}
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-YG5W0C47VY`}
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
+    <div className="min-h-screen bg-background">
+      <Button
+        variant="ghost"
+        size="icon"
+        className="fixed top-4 right-4 z-1000"
+        onClick={toggleTheme}
       >
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-YG5W0C47VY');
-        `}
-      </Script>
-      <div className="min-h-screen bg-background">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="fixed top-4 right-4 z-1000"
-          onClick={toggleTheme}
-        >
-          {theme === 'light' ? (
-            <Moon className="h-5 w-5" />
-          ) : (
-            <Sun className="h-5 w-5" />
-          )}
-        </Button>
-        <Header />
-        <main className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <Player />
-              <EpisodeDetails />
-              <Reviews />
-            </div>
-            <div className="space-y-8">
-              <EpisodeList />
-              <Recommendations />
-            </div>
+        {theme === 'light' ? (
+          <Moon className="h-5 w-5" />
+        ) : (
+          <Sun className="h-5 w-5" />
+        )}
+      </Button>
+      <Header />
+      <main className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            <Player />
+            <EpisodeDetails />
+            <Reviews />
           </div>
-        </main>
-        <Footer />
-      </div>
-      <Component {...pageProps} />
-    </>
+          <div className="space-y-8">
+            <EpisodeList />
+            <Recommendations />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
   )
 } 
