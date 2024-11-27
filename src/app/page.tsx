@@ -43,8 +43,10 @@ export default function Home() {
           <Sun className="h-5 w-5" />
         )}
       </Button>
-      <Asterra />
-      <Header />
+      <div className="relative">
+        <Asterra className="absolute top-0 left-0 w-full" />
+        <Header className="relative z-10" />
+      </div>
       <main className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
