@@ -16,7 +16,7 @@ export default function Banner() {
     return (
         <div className="flex justify-center">
             <iframe
-                src={`/adsterra_${adWidth}.html`}
+                src={`adsterra_${adWidth}.html`}
                 width={`${adWidth}px`}
                 height={`${adHeight}px`}
                 scrolling="no"
