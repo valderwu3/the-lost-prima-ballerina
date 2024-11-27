@@ -44,7 +44,7 @@ export default function Home() {
         )}
       </Button>
       <div className="relative">
-        <Asterra className="absolute top-0 left-0 w-full" />
+        <Asterra />
         <Header className="relative z-10" />
       </div>
       <main className="container mx-auto px-4 py-8">
