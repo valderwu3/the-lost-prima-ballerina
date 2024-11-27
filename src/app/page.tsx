@@ -11,6 +11,7 @@ import Recommendations from '@/components/Recommendations'
 import Reviews from '@/components/Reviews'
 import Footer from '@/components/Footer'
 import { Button } from '@/components/ui/button'
+import Asterra from '@/components/Asterra'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -42,6 +43,7 @@ export default function Home() {
           <Sun className="h-5 w-5" />
         )}
       </Button>
+      <Asterra />
       <Header />
       <main className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
